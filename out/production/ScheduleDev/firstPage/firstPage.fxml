@@ -18,6 +18,11 @@
                         <MenuItem text="Reset"/>
                     </items>
                 </Menu>
+                <Menu text="Page">
+                    <items>
+                        <MenuItem text="Home"/>
+                    </items>
+                </Menu>
             </menus>
         </MenuBar>
     </top>
