@@ -10,20 +10,18 @@
 <BorderPane fx:controller="firstPage.firstPageController"
             xmlns:fx="http://javafx.com/fxml">
     <top>
-    <MenuBar fx:id="menuBar" >
+        <MenuBar fx:id="menuBar" >
 
-        <menus>
-            <Menu text="File">
-                <items>
-                    <MenuItem text="Reset"/>
-                </items>
-            </Menu>
-
-        </menus>
-
-    </MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="Reset"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
     </top>
-    
+
     <left>
 
     </left>
