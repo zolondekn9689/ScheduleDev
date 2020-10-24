@@ -1,31 +1,33 @@
-package firstPage;
+package calendarBuilderPage;
 
 import Settings.Settings;
+import Settings.Settings.*;
+import firstPage.ControllerPage;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
-public class firstPageController extends ControllerPage
+public class calendarBuilderPage extends ControllerPage
 {
-    public BorderPane firstPane;
-    private Settings settings;
+    @FXML
+    public BorderPane calendarPane;
 
-    @Override
-    public void initPageSize(BorderPane pane) {
-        super.initPageSize(pane);
-    }
+    // The settings are available for this page.
+    private Settings settings;
 
     public void initialize()
     {
         settings = Settings.getInstance();
-        //double height = settings.getPref_height();
-        //double width = settings.getInstance().getPref_width();
-        //firstPane.setPrefWidth(width);
-        //firstPane.setPrefHeight(height);
-        initPageSize(firstPane);
+        calendarPane.setPrefHeight(settings.getPref_height());
+        calendarPane.setPrefWidth(settings.getPref_width());
     }
 
     @Override
@@ -46,10 +48,5 @@ public class firstPageController extends ControllerPage
     @Override
     public void menuActionHome(ActionEvent event) throws IOException {
         super.menuActionHome(event);
-    }
-
-    @Override
-    public void menuActionSettings() throws IOException {
-        super.menuActionSettings();
     }
 }

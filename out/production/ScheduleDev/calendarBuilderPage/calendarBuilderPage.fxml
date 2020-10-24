@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="calendarPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendarBuilderPage.calendarBuilderPage">
+
+
+
+    <top>
+
+        <MenuBar fx:id="menuBar">
+
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="Reset" />
+                    </items>
+                </Menu>
+                <Menu text="Page">
+                    <items>
+                        <MenuItem text="Home" onAction="#menuActionHome"/>
+                        <MenuItem text="Calendar Developer" onAction="#menuActionCal"/>
+                        <MenuItem text="Employee Chart" onAction="#menuActionEmployeeChart"/>
+                        <MenuItem text="Employee Info" onAction="#menuActionEmployeeInfo"/>
+                    </items>
+                </Menu>
+
+
+            </menus>
+        </MenuBar>
+
+
+
+       </top>
+        <center>
+            <Label text="Hello World"></Label>
+        </center>
+
+
+
+
+
+
+</BorderPane>

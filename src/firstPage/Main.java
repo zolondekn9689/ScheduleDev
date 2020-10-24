@@ -1,5 +1,6 @@
 package firstPage;
 
+import Settings.Settings;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -18,12 +19,18 @@ public class Main extends Application
 {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception
+    {
 
         Parent root = FXMLLoader.load(getClass().getResource("firstPage.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 275*2));
+        primaryStage.setTitle(Settings.getInstance().app_name);
+
+        primaryStage.setScene(new Scene(root, Settings.getInstance().getPref_width(), Settings.getInstance().getPref_height()));
+        Settings.getInstance().setStage(primaryStage);
+
         primaryStage.show();
+
+
     }
 
 

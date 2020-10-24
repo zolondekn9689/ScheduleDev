@@ -1,32 +1,22 @@
-package firstPage;
+package EmployeeInfoPage;
 
 import Settings.Settings;
+import firstPage.ControllerPage;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
-import javafx.fxml.FXML;
-import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
-public class firstPageController extends ControllerPage
-{
-    public BorderPane firstPane;
+public class EmployeeInfoPageController extends ControllerPage {
+    // Will be used for alot of things.
     private Settings settings;
 
-    @Override
-    public void initPageSize(BorderPane pane) {
-        super.initPageSize(pane);
+
+    public void initialize() {
+        settings = Settings.getInstance();
+
     }
 
-    public void initialize()
-    {
-        settings = Settings.getInstance();
-        //double height = settings.getPref_height();
-        //double width = settings.getInstance().getPref_width();
-        //firstPane.setPrefWidth(width);
-        //firstPane.setPrefHeight(height);
-        initPageSize(firstPane);
-    }
 
     @Override
     public void menuActionEmployeeInfo(ActionEvent event) throws IOException {
@@ -46,10 +36,5 @@ public class firstPageController extends ControllerPage
     @Override
     public void menuActionHome(ActionEvent event) throws IOException {
         super.menuActionHome(event);
-    }
-
-    @Override
-    public void menuActionSettings() throws IOException {
-        super.menuActionSettings();
     }
 }

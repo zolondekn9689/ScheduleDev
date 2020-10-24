@@ -1,43 +1,50 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuItem?>
-<BorderPane fx:controller="firstPage.firstPageController"
-            xmlns:fx="http://javafx.com/fxml">
-    <top>
-        <MenuBar fx:id="menuBar" >
-
-            <menus>
-                <Menu text="File">
-                    <items>
-                        <MenuItem text="Reset"/>
-                    </items>
-                </Menu>
-                <Menu text="Page">
-                    <items>
-                        <MenuItem text="Home"/>
-                    </items>
-                </Menu>
-            </menus>
-        </MenuBar>
-    </top>
-
-    <left>
-
-    </left>
-    <right>
-
-    </right>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane fx:id="firstPane" xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="firstPage.firstPageController">
 
 
-    <bottom>
+            <top>
+                <MenuBar fx:id="menuBar">
 
-    </bottom>
+                    <menus>
+                        <Menu text="File">
+                            <items>
+                                <MenuItem text="Reset" />
+                                <MenuItem text="Settings" onAction="#menuActionSettings"/>
+                            </items>
+                        </Menu>
+                        <Menu text="Page">
+                            <items>
+                                <MenuItem text="Home" onAction="#menuActionHome"/>
+                                <MenuItem text="Calendar Developer" onAction="#menuActionCal"/>
+                                <MenuItem text="Employee Chart" onAction="#menuActionEmployeeChart"/>
+                                <MenuItem text="Employee Info" onAction="#menuActionEmployeeInfo"/>
+                            </items>
+                        </Menu>
+
+
+                    </menus>
+                </MenuBar>
+            </top>
+
+            <left>
+
+
+
+            </left>
+            <right>
+
+            </right>
+
+
+            <bottom>
+
+            </bottom>
+
 
 
 

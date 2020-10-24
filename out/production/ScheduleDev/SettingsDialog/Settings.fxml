@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="settingsPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: aqua" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsDialog.SettingsController">
+    <top>
+        <Label alignment="CENTER" contentDisplay="CENTER" text="Preferences" textAlignment="CENTER" />
+    </top>
+    <center>
+        <VBox>
+            <HBox>
+                <Label text="App Name: " />
+                <Label fx:id="appName" />
+            </HBox>
+        <HBox>
+            <Label text="Current Scene: " />
+            <TextField fx:id="curScene" editable="false" />
+        </HBox>
+
+
+        </VBox>
+
+    </center>
+   <bottom>
+        <Button onAction="#onClose" text="Close" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
