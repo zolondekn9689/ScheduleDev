@@ -45,6 +45,7 @@ public class Settings {
     }
 
 
+
     /**
      * Gets the instance of Settings.Preference.
      * @return
@@ -94,6 +95,7 @@ public class Settings {
 
         try {
             Parent pane = FXMLLoader.load(getClass().getResource(file.getFilePackagePath()));
+
             Scene scene = new Scene(pane);
             getStage().setScene(scene);
         } catch (IOException e) {

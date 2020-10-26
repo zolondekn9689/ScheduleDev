@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="CalendarAPI.CalendarView"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <HBox GridPane.rowIndex="2" GridPane.columnIndex="2">
+        <Label text="Monday"/>
+        <Label text="Tuesday"/>
+    </HBox>
+
+</GridPane>

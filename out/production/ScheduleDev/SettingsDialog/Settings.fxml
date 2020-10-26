@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane fx:id="settingsPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: aqua" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsDialog.SettingsController">
     <top>
-        <Label alignment="CENTER" contentDisplay="CENTER" text="Preferences" textAlignment="CENTER" />
+        <Label alignment="CENTER" contentDisplay="CENTER" text="Preferences" textAlignment="CENTER" fx:id="titleName">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="250.0" />
+         </BorderPane.margin></Label>
     </top>
     <center>
         <VBox>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<BorderPane fx:id="firstPane" xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="firstPage.firstPageController">
+
+<BorderPane fx:id="firstPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firstPage.firstPageController">
 
 
             <top>
@@ -14,15 +15,20 @@
                         <Menu text="File">
                             <items>
                                 <MenuItem text="Reset" />
-                                <MenuItem text="Settings" onAction="#menuActionSettings"/>
+                                <MenuItem onAction="#menuActionSettings" text="Settings" />
                             </items>
                         </Menu>
                         <Menu text="Page">
                             <items>
-                                <MenuItem text="Home" onAction="#menuActionHome"/>
-                                <MenuItem text="Calendar Developer" onAction="#menuActionCal"/>
-                                <MenuItem text="Employee Chart" onAction="#menuActionEmployeeChart"/>
-                                <MenuItem text="Employee Info" onAction="#menuActionEmployeeInfo"/>
+                                <MenuItem onAction="#menuActionHome" text="Home" />
+                                <MenuItem onAction="#menuActionCal" text="Calendar Developer" />
+                                <MenuItem onAction="#menuActionEmployeeChart" text="Employee Chart" />
+                                <MenuItem onAction="#menuActionEmployeeInfo" text="Employee Info" />
+                            </items>
+                        </Menu>
+                        <Menu text="Options">
+                            <items>
+
                             </items>
                         </Menu>
 
@@ -32,13 +38,70 @@
             </top>
 
             <left>
+                <VBox style="-fx-background-color: antiquewhite">
+                    <Label prefHeight="20.0" prefWidth="237.0" text="Employees:">
+                        <font>
+                            <Font name="Times New Roman" size="18.0" />
+                        </font>
+            <VBox.margin>
+               <Insets bottom="5.0" left="25.0" />
+            </VBox.margin>
+                    </Label>
+                   <ListView fx:id="employeeListView" maxHeight="-Infinity" maxWidth="-Infinity">
 
+            <opaqueInsets>
+               <Insets right="10.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets left="10.0" />
+            </VBox.margin>
+
+                   </ListView>
+                    <HBox>
+                        <Button onMouseClicked="#actionAdd" text="Add">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin></Button>
+                        <Button onMouseClicked="#actionRemove" text="Remove" />
+                    </HBox>
+
+                </VBox>
 
 
             </left>
-            <right>
+            <center>
+                <GridPane gridLinesVisible="true" style="-fx-background-color: bisque" fx:id="calendarView">
+                    <Label text="Monday" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+               <Insets left="20.0" right="20.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font></Label>
+                    <Label text="Tuesday" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="20.0" right="20.0" />
+            </GridPane.margin>
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
 
-            </right>
+
+
+                </GridPane>
+            </center>
 
 
             <bottom>
